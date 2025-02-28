@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\NominatimController;
+use App\Http\Controllers\ViaCepController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+    Route::get('/searchAddress', [ViaCepController::class, 'searchEndereco']);
+    Route::get('/searchCep', [ViaCepController::class, 'searchCep']);
+    Route::get('/contact-map/{id}', [DashboardController::class, 'getContactMap']);

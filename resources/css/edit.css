@@ -1,0 +1,50 @@
+body {
+    background-image: url('/public/98.jpg');
+    color: rgb(255, 255, 255);
+}
+
+#main p{
+    font-size: 20px;
+    text-align: left;
+}
+
+#main {
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 100vh;
+    color: black;
+    text-align: left;
+    padding: 40px;
+    position: fixed;   
+    overflow-y: auto;  
+}
+
+#main .logout{
+    margin-left: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#main .logout:hover{
+    background-color: #a53945;
+    color: white;
+}
+
+#main .create{
+    margin-top: 200px;
+    background-color: #a39fa0;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#main .create:hover{
+    background-color: #525252;
+    color: white;
+}

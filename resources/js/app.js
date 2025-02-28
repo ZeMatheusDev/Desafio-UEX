@@ -9,6 +9,8 @@ import PrimeVue from 'primevue/config';
 import 'primeicons/primeicons.css'; 
 import 'primeflex/primeflex.css';
 import '../css/app.css'; 
+import 'vue-toastification/dist/index.css';
+import Toast from 'vue-toastification';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -19,6 +21,7 @@ createInertiaApp({
         const app = createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(Toast)
             .use(PrimeVue);
 
         app.mount(el);

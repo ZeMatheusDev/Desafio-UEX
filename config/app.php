@@ -165,6 +165,9 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
+        App\Providers\ViaCepServiceProvider::class,
+        App\Providers\NominatimServiceProvider::class,
+        App\Providers\GoogleMapsServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,

@@ -13,9 +13,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('senha');
             $table->string('nome');
-            $table->string('login')->unique();
             $table->string('cpf')->unique();
-            $table->string('image')->nullable();
             $table->decimal('latitude', 10, 8)->nullable();
             $table->decimal('longitude', 11, 8)->nullable();
             $table->timestamps();

@@ -1,0 +1,22 @@
+body {
+    background-image: url('/public/background.png');
+    color: white;
+}
+
+#main p{
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#main {
+    background-color: rgb(35, 50, 57);
+    width: 350px;
+    height: 100vh;
+    transition: 0.4s ease;
+}
+
+#main.expanded {
+    width: 400px;
+}
+

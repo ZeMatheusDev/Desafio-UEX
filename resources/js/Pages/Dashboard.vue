@@ -61,7 +61,6 @@ import { ref, computed, watch } from 'vue';
 
 const props = defineProps({
   contatos: Array,
-  maps: String,
 });
 
 const showModal = ref(false);
@@ -84,7 +83,7 @@ const filteredContatos = computed(() => {
     });
 });
 
-const selectedMapUrl = ref(props.maps.original.map_url);
+const selectedMapUrl = ref();
 
 const paginatedContatos = computed(() => {
     const start = (currentPage.value - 1) * itemsPerPage;

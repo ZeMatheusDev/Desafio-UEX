@@ -12,11 +12,9 @@ class DashboardController extends Controller
 {
     public function index(GoogleMapsServiceInterface $googleMaps){
         $contatos = Contacts::where('deleted', 0)->get()->toArray();
-        $maps = $googleMaps->getContactMap(3);
         
         return Inertia::render('Dashboard', [
             'contatos' => $contatos,
-            'maps' => $maps,
         ]);
     }
 

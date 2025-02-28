@@ -48,7 +48,7 @@ class LoginControllerTest extends TestCase
             'email' => 'teste@exemplo.com',
             'senha' => Hash::make('senha_correta'),
             'deleted' => 0,
-            'nome' => 'Nome de Teste'
+            'nome' => 'Teste de sessao'
         ]);
 
         $response = $this->post(route('login'), [
@@ -59,7 +59,7 @@ class LoginControllerTest extends TestCase
         $response->assertRedirect();
         $this->assertAuthenticatedAs($user);
         $this->assertEquals('teste@exemplo.com', session('email'));
-        $this->assertEquals('Nome de Teste', session('nome'));
+        $this->assertEquals('Teste de sessao', session('nome'));
     }
 
     public function test_logout()

@@ -11,7 +11,7 @@ use Inertia\Inertia;
 class DashboardController extends Controller
 {
     public function index(GoogleMapsServiceInterface $googleMaps){
-        $contatos = Contacts::where('deleted', 0)->get()->toArray();
+        $contatos = Contacts::where('deleted', 0)->where('id_user', auth()->id())->get()->toArray();
         
         return Inertia::render('Dashboard', [
             'contatos' => $contatos,
